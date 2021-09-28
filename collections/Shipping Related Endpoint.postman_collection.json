@@ -1,0 +1,1467 @@
+{
+	"info": {
+		"_postman_id": "3e7c96f6-6b54-4df2-6fe3-5325bc46acd1",
+		"name": "Delivery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/transaction_evidences/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/transaction_evidences/get?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&item_id=m68400451985",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"transaction_evidences",
+						"get"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "item_id",
+							"value": "m68400451985"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/transactions/create_cancel_request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/transactions/create_cancel_request?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=187025&reason_text=\"hhhhhhhhhhh\"&reason_id=2",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"transactions",
+						"create_cancel_request"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "187025"
+						},
+						{
+							"key": "reason_text",
+							"value": "\"hhhhhhhhhhh\""
+						},
+						{
+							"key": "reason_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/transaction_messages/get_messages",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/transaction_messages/get_messages?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&item_id=m93717442225",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"transaction_messages",
+						"get_messages"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "item_id",
+							"value": "m93717442225"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/transaction_messages/post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/transaction_messages/post?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&item_id=m92406467632&body=hello",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"transaction_messages",
+						"post"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "item_id",
+							"value": "m92406467632"
+						},
+						{
+							"key": "body",
+							"value": "hello"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery/get_slip",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery/get_slip?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=286502",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery",
+						"get_slip"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "286502"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery/publish_qr_code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery/publish_qr_code?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=286514&item_name=hello&shipping_class=4&qr_code_type=00",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery",
+						"publish_qr_code"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "286514"
+						},
+						{
+							"key": "item_name",
+							"value": "hello"
+						},
+						{
+							"key": "shipping_class",
+							"value": "4"
+						},
+						{
+							"key": "qr_code_type",
+							"value": "00"
+						},
+						{
+							"key": "store",
+							"value": "\bnull",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery/publish_pickup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery/publish_pickup?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=219103&shipping_class=9&pickup_date=2019-02-23&pickup_time=02&item_name=プリンター",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery",
+						"publish_pickup"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "219103"
+						},
+						{
+							"key": "shipping_class",
+							"value": "9"
+						},
+						{
+							"key": "pickup_date",
+							"value": "2019-02-23"
+						},
+						{
+							"key": "pickup_time",
+							"value": "02"
+						},
+						{
+							"key": "item_name",
+							"value": "プリンター"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery/get_delivery_to_by_buyer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery/get_delivery_to_by_buyer?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=279717",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery",
+						"get_delivery_to_by_buyer"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "279717"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery/status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery/status?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=229577",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery",
+						"status"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "229577"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery/get_shipping_classes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery/get_shipping_classes?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=233844",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery",
+						"get_shipping_classes"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "233844"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery/qr_code",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery/qr_code?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=279717",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery",
+						"qr_code"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "279717"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery/bar_code",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery/bar_code?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=102701",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery",
+						"bar_code"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "102701"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery/get_maintenance",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery/get_maintenance?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery",
+						"get_maintenance"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery_japan_post/get_slip",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery_japan_post/get_slip?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=510096074",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery_japan_post",
+						"get_slip"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "510096074"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery_japan_post/status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery_japan_post/status?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=224893",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery_japan_post",
+						"status"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "224893"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery_japan_post/publish_qr_code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery_japan_post/publish_qr_code?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=510096074&item_name=Yupacket+ Test&shipping_class=31&qr_code_type=2",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery_japan_post",
+						"publish_qr_code"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "510096074"
+						},
+						{
+							"key": "item_name",
+							"value": "Yupacket+ Test"
+						},
+						{
+							"key": "shipping_class",
+							"value": "31"
+						},
+						{
+							"key": "qr_code_type",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery_japan_post/hand_over",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery_japan_post/hand_over?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=510096074",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery_japan_post",
+						"hand_over"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "510096074"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/delivery_japan_post/get_shipping_classes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery_japan_post/get_shipping_classes?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=116489",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery_japan_post",
+						"get_shipping_classes"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "116489"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deliver_address/get_list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/delivery/qr_code?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=102701",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"delivery",
+						"qr_code"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "102701"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/yamato_kazai/get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/yamato_kazai/get?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=118549",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"yamato_kazai",
+						"get"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "118549"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/yamato_kazai/propose",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/yamato_kazai/propose?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=510101695&date=2019-10-05&time=08&state=filling",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"yamato_kazai",
+						"propose"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "510101695"
+						},
+						{
+							"key": "date",
+							"value": "2019-10-05"
+						},
+						{
+							"key": "time",
+							"value": "08"
+						},
+						{
+							"key": "state",
+							"value": "filling"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/yamato_kazai/pickup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/yamato_kazai/pickup?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=510101695&date=2019-10-05&time=08&contents=package contents&force=false",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"yamato_kazai",
+						"pickup"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "510101695"
+						},
+						{
+							"key": "date",
+							"value": "2019-10-05"
+						},
+						{
+							"key": "time",
+							"value": "08"
+						},
+						{
+							"key": "contents",
+							"value": "package contents"
+						},
+						{
+							"key": "force",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/yamato_kazai/pend",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/yamato_kazai/pend?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=510101695",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"yamato_kazai",
+						"pend"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "510101695"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/yamato_kazai/postpone_delivery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/yamato_kazai/postpone_delivery?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=510101695&date=2019-09-12&time=08&force=false",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"yamato_kazai",
+						"postpone_delivery"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "510101695"
+						},
+						{
+							"key": "date",
+							"value": "2019-09-12"
+						},
+						{
+							"key": "time",
+							"value": "08"
+						},
+						{
+							"key": "force",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/yamato_kazai/set_contents",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "transaction_evidence_id",
+							"value": "510130362",
+							"type": "text"
+						},
+						{
+							"key": "contents",
+							"value": "車",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/yamato_kazai/set_contents?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"yamato_kazai",
+						"set_contents"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/yamato_kazai/admin_get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ADMIN_ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}yamato_kazai/admin_get?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=118794",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"yamato_kazai",
+						"admin_get"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "118794"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/yamato_kazai/admin_reset",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ADMIN_ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/yamato_kazai/admin_reset?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&transaction_evidence_id=118794",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"yamato_kazai",
+						"admin_reset"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "transaction_evidence_id",
+							"value": "118794"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/contact/call",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d6d75bc7-88e9-4851-8d49-ce70d95f6655",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"tests[\"should have valid user ID\"] = responseCode.code == 200 && res.result === \"OK\" && Number.isInteger(res.data.id)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "08092000458",
+							"type": "text"
+						},
+						{
+							"key": "item_id",
+							"value": "m25564179899",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/contact/call?_platform={{PLATFORM}}&_app_version={{APP_VERSION}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"contact",
+						"call"
+					],
+					"query": [
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/drop_shipping/register_items",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"item_ids\": [\"m25896175035\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/services/drop_shipping/v1/register_items?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"services",
+						"drop_shipping",
+						"v1",
+						"register_items"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/drop_shipping/get_drop_shipping_information",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item_id\": \"m25896175035\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/services/drop_shipping/v1/get_drop_shipping_information?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"services",
+						"drop_shipping",
+						"v1",
+						"get_drop_shipping_information"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/drop_shipping/get_warehouse_information",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item_id\": \"m25896175035\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/services/drop_shipping/v1/get_drop_shipping_information?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"services",
+						"drop_shipping",
+						"v1",
+						"get_drop_shipping_information"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/drop_shipping/get_shipment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item_id\": \"m25896175035\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/services/drop_shipping/v1/get_drop_shipping_information?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"services",
+						"drop_shipping",
+						"v1",
+						"get_drop_shipping_information"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

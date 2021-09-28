@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "497634aa-8ce3-478d-b40a-dd95209fc07c",
+		"name": "Deferred Payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/deferred_payments/get_current",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/deferred_payments/get_current?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"deferred_payments",
+						"get_current"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deferred_payments/get_bank_account",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/deferred_payments/get_bank_account?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"deferred_payments",
+						"get_bank_account"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deferred_payments/get_monthly_histories",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "max_pager_id",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/deferred_payments/get_monthly_histories?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"deferred_payments",
+						"get_monthly_histories"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deferred_payments/get_item_histories",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "month",
+							"value": "1491004800",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/deferred_payments/get_item_histories?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"deferred_payments",
+						"get_item_histories"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deferred_payments/payment_point",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "deferred_payment_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "consume_funds",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "consume_free_point",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/deferred_payments/payment_point?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"deferred_payments",
+						"payment_point"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deferred_payments/create_payment_cvs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "deferred_payment_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "consume_funds",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "consume_free_point",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "LAWSON2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/deferred_payments/create_payment_cvs?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"deferred_payments",
+						"create_payment_cvs"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deferred_payments/modify_paid_method",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "deferred_payment_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "paid_method",
+							"value": "point",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/deferred_payments/modify_paid_method?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"deferred_payments",
+						"modify_paid_method"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deferred_payments/parental_consent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/deferred_payments/parental_consent?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"deferred_payments",
+						"parental_consent"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

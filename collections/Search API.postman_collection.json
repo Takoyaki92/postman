@@ -1,0 +1,241 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Kandou Color API",
+		"_postman_id": "01d9be12-cd5b-776f-c329-69fc3f75e67e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/search_condition/save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "color_id",
+							"value": "1,2,3",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "keyword",
+							"value": "Hello",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/search_condition/save?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&_access_token={{ACCESS_TOKEN}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"search_condition",
+						"save"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}",
+							"equals": true
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}",
+							"equals": true
+						},
+						{
+							"key": "_access_token",
+							"value": "{{ACCESS_TOKEN}}",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/search_condition/conditions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/search_condition/conditions?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"search_condition",
+						"conditions"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}",
+							"equals": true
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/search_condition/suggested_items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}search_condition/suggested_items?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&limit=10",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"search_condition",
+						"suggested_items"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}",
+							"equals": true
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}",
+							"equals": true
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/search_index/search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/search_index/search?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&keyword=Hello&color_id=1,2,3",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"search_index",
+						"search"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}",
+							"equals": true
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}",
+							"equals": true
+						},
+						{
+							"key": "keyword",
+							"value": "Hello",
+							"equals": true
+						},
+						{
+							"key": "color_id",
+							"value": "1,2,3",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/sell_suggestion/from_image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "photo_1",
+							"description": "",
+							"type": "file",
+							"src": "pikachuchu.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/sell_suggestion/from_image?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"sell_suggestion",
+						"from_image"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}",
+							"equals": true
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

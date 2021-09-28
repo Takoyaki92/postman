@@ -1,0 +1,440 @@
+{
+	"info": {
+		"_postman_id": "79b479ac-1fbb-4a65-882b-ab0499826396",
+		"name": "User Registration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth/refresh_token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c665e4f9-565d-41e0-96bc-011c833e2816",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"tests[\"should have access token\"] = responseCode.code == 200 && res.result === \"OK\" && !!res.data.refresh_token;",
+							"postman.setEnvironmentVariable(\"REFRESH_TOKEN\", res.data.refresh_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User",
+						"value": "Mercari_r/2607 (iOS 10.2; en; iPhone)"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uuid",
+							"value": "{{UUID}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/auth/refresh_token?_platform={{PLATFORM}}&_app_version={{APP_VERSION}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"auth",
+						"refresh_token"
+					],
+					"query": [
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/access_token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "787bcce4-bc0b-4425-b320-a13e1596f690",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"tests[\"should have access token\"] = responseCode.code == 200 && res.result === \"OK\" && !!res.data.access_token;",
+							"postman.setEnvironmentVariable(\"ACCESS_TOKEN\", res.data.access_token);",
+							"postman.setEnvironmentVariable(\"REFRESH_TOKEN\", res.data.refresh_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "User",
+						"value": "Mercari_r/2607 (iOS 10.2; en; iPhone)"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refresh_token",
+							"value": "{{REFRESH_TOKEN}}",
+							"type": "text"
+						},
+						{
+							"key": "uuid",
+							"value": "{{UUID}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/auth/access_token?_platform={{PLATFORM}}&_app_version={{APP_VERSION}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"auth",
+						"access_token"
+					],
+					"query": [
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register_sms_confirmations/start",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "787bcce4-bc0b-4425-b320-a13e1596f690",
+						"exec": [
+							"var res = JSON.parse(responseBody);",
+							"tests[\"should have id\"] = responseCode.code == 200 && res.result === \"OK\" && !!res.data.id;",
+							"postman.setEnvironmentVariable(\"REGISTER_ID\", res.data.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "register_method",
+							"value": "mercari",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "YOUR NAME",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "{{EMAIL}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{PASSWORD}}",
+							"type": "text"
+						},
+						{
+							"key": "iv_cert",
+							"value": "{{IV_CERT}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/register_sms_confirmations/start?_platform={{PLATFORM}}&_app_version={{APP_VERSION}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"register_sms_confirmations",
+						"start"
+					],
+					"query": [
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register_sms_confirmations/set_personal_info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "787bcce4-bc0b-4425-b320-a13e1596f690",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "{{REGISTER_ID}}",
+							"type": "text"
+						},
+						{
+							"key": "family_name_kanji",
+							"value": "メルカリ",
+							"type": "text"
+						},
+						{
+							"key": "first_name_kanji",
+							"value": "太郎",
+							"type": "text"
+						},
+						{
+							"key": "family_name_kana",
+							"value": "メルカリ",
+							"type": "text"
+						},
+						{
+							"key": "first_name_kana",
+							"value": "タロウ",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "19800101",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/register_sms_confirmations/set_personal_info?_platform={{PLATFORM}}&_app_version={{APP_VERSION}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"register_sms_confirmations",
+						"set_personal_info"
+					],
+					"query": [
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register_sms_confirmations/set_phone_number",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "787bcce4-bc0b-4425-b320-a13e1596f690",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "{{REGISTER_ID}}",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "00000000000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/register_sms_confirmations/set_phone_number?_platform={{PLATFORM}}&_app_version={{APP_VERSION}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"register_sms_confirmations",
+						"set_phone_number"
+					],
+					"query": [
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register_sms_confirmations/finish",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "787bcce4-bc0b-4425-b320-a13e1596f690",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{ACCESS_TOKEN}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "{{REGISTER_ID}}",
+							"type": "text"
+						},
+						{
+							"key": "captcha",
+							"value": "2989",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/register_sms_confirmations/finish?_platform={{PLATFORM}}&_app_version={{APP_VERSION}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"register_sms_confirmations",
+						"finish"
+					],
+					"query": [
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "cf7bdb48-d228-4482-accf-0dada70e2790",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e116b225-2a3e-488c-bf93-60dbbedcbf35",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

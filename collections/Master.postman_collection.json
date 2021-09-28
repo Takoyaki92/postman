@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "30efcfa2-e639-4ff4-b177-53f0c09a9dde",
+		"name": "Master",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/master/get_from_cache",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/master/get_from_cache?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&master_name=master/get_item_sizes",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"master",
+						"get_from_cache"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "master_name",
+							"value": "master/get_item_sizes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/master/get_config",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/master/get_config?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"master",
+						"get_config"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/master/get_item_category_catalogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/master/get_item_category_catalogs?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}&_access_token={{ACCESS_TOKEN}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"master",
+						"get_item_category_catalogs"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						},
+						{
+							"key": "_access_token",
+							"value": "{{ACCESS_TOKEN}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/master/get_colors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/master/get_colors?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"master",
+						"get_colors"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/master/get_shipping_from_areas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/master/get_shipping_from_areas?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"master",
+						"get_shipping_from_areas"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/master/get_all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{ACCESS_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{MERCARI_API_JP}}/master/get_all?_app_version={{APP_VERSION}}&_platform={{PLATFORM}}",
+					"host": [
+						"{{MERCARI_API_JP}}"
+					],
+					"path": [
+						"master",
+						"get_all"
+					],
+					"query": [
+						{
+							"key": "_app_version",
+							"value": "{{APP_VERSION}}"
+						},
+						{
+							"key": "_platform",
+							"value": "{{PLATFORM}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
